@@ -1,0 +1,1419 @@
+{
+    "metadata": {
+        "kernelspec": {
+            "name": "SQL",
+            "display_name": "SQL",
+            "language": "sql"
+        },
+        "language_info": {
+            "name": "sql",
+            "version": ""
+        }
+    },
+    "nbformat_minor": 2,
+    "nbformat": 4,
+    "cells": [
+        {
+            "cell_type": "code",
+            "source": [
+                "USE Fall_2023;\n",
+                "\n",
+                "SELECT TOP 10 * FROM OrderData;\n",
+                ""
+            ],
+            "metadata": {
+                "azdata_cell_guid": "3bd09c42-528f-4bb5-aa77-236bb01f1d6f",
+                "language": "sql"
+            },
+            "outputs": [
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "(10 rows affected)"
+                    },
+                    "metadata": {}
+                },
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "Total execution time: 00:00:00.108"
+                    },
+                    "metadata": {}
+                },
+                {
+                    "output_type": "execute_result",
+                    "metadata": {},
+                    "execution_count": 1,
+                    "data": {
+                        "application/vnd.dataresource+json": {
+                            "schema": {
+                                "fields": [
+                                    {
+                                        "name": "column1"
+                                    },
+                                    {
+                                        "name": "Benefit_per_order"
+                                    },
+                                    {
+                                        "name": "Order_City"
+                                    },
+                                    {
+                                        "name": "Order_Country"
+                                    },
+                                    {
+                                        "name": "Order_Customer_Id"
+                                    },
+                                    {
+                                        "name": "order_date_DateOrders"
+                                    },
+                                    {
+                                        "name": "Order_Id"
+                                    },
+                                    {
+                                        "name": "Order_Item_Cardprod_Id"
+                                    },
+                                    {
+                                        "name": "Order_Item_Discount"
+                                    },
+                                    {
+                                        "name": "Order_Item_Discount_Rate"
+                                    },
+                                    {
+                                        "name": "Order_Item_Id"
+                                    },
+                                    {
+                                        "name": "Order_Item_Product_Price"
+                                    },
+                                    {
+                                        "name": "Order_Item_Profit_Ratio"
+                                    },
+                                    {
+                                        "name": "Order_Item_Quantity"
+                                    },
+                                    {
+                                        "name": "Order_Item_Total"
+                                    },
+                                    {
+                                        "name": "Order_Profit_Per_Order"
+                                    },
+                                    {
+                                        "name": "Order_Region"
+                                    },
+                                    {
+                                        "name": "Order_State"
+                                    },
+                                    {
+                                        "name": "Order_Status"
+                                    },
+                                    {
+                                        "name": "Order_Zipcode"
+                                    },
+                                    {
+                                        "name": "Sales"
+                                    },
+                                    {
+                                        "name": "Type"
+                                    }
+                                ]
+                            },
+                            "data": [
+                                {
+                                    "column1": "0",
+                                    "Benefit_per_order": "91.25",
+                                    "Order_City": "Bekasi",
+                                    "Order_Country": "Indonesia",
+                                    "Order_Customer_Id": "20755",
+                                    "order_date_DateOrders": "2018-01-31 22:56:00.0000000",
+                                    "Order_Id": "77202",
+                                    "Order_Item_Cardprod_Id": "1360",
+                                    "Order_Item_Discount": "13.109999656677246",
+                                    "Order_Item_Discount_Rate": "0.03999999910593033",
+                                    "Order_Item_Id": "180517",
+                                    "Order_Item_Product_Price": "327.75",
+                                    "Order_Item_Profit_Ratio": "0.28999999165534973",
+                                    "Order_Item_Quantity": "1",
+                                    "Order_Item_Total": "314.6400146",
+                                    "Order_Profit_Per_Order": "91.25",
+                                    "Order_Region": "Southeast Asia",
+                                    "Order_State": "Java Occidental",
+                                    "Order_Status": "COMPLETE",
+                                    "Order_Zipcode": "NULL",
+                                    "Sales": "327.75",
+                                    "Type": "DEBIT"
+                                },
+                                {
+                                    "column1": "1",
+                                    "Benefit_per_order": "-249.08999633789062",
+                                    "Order_City": "Bikaner",
+                                    "Order_Country": "India",
+                                    "Order_Customer_Id": "19492",
+                                    "order_date_DateOrders": "2018-01-13 12:27:00.0000000",
+                                    "Order_Id": "75939",
+                                    "Order_Item_Cardprod_Id": "1360",
+                                    "Order_Item_Discount": "16.389999389648438",
+                                    "Order_Item_Discount_Rate": "0.05000000074505806",
+                                    "Order_Item_Id": "179254",
+                                    "Order_Item_Product_Price": "327.75",
+                                    "Order_Item_Profit_Ratio": "-0.800000011920929",
+                                    "Order_Item_Quantity": "1",
+                                    "Order_Item_Total": "311.3599854",
+                                    "Order_Profit_Per_Order": "-249.0899963",
+                                    "Order_Region": "South Asia",
+                                    "Order_State": "Rajastán",
+                                    "Order_Status": "PENDING",
+                                    "Order_Zipcode": "NULL",
+                                    "Sales": "327.75",
+                                    "Type": "TRANSFER"
+                                },
+                                {
+                                    "column1": "2",
+                                    "Benefit_per_order": "-247.77999877929688",
+                                    "Order_City": "Bikaner",
+                                    "Order_Country": "India",
+                                    "Order_Customer_Id": "19491",
+                                    "order_date_DateOrders": "2018-01-13 12:06:00.0000000",
+                                    "Order_Id": "75938",
+                                    "Order_Item_Cardprod_Id": "1360",
+                                    "Order_Item_Discount": "18.030000686645508",
+                                    "Order_Item_Discount_Rate": "0.05999999865889549",
+                                    "Order_Item_Id": "179253",
+                                    "Order_Item_Product_Price": "327.75",
+                                    "Order_Item_Profit_Ratio": "-0.800000011920929",
+                                    "Order_Item_Quantity": "1",
+                                    "Order_Item_Total": "309.7200012",
+                                    "Order_Profit_Per_Order": "-247.7799988",
+                                    "Order_Region": "South Asia",
+                                    "Order_State": "Rajastán",
+                                    "Order_Status": "CLOSED",
+                                    "Order_Zipcode": "NULL",
+                                    "Sales": "327.75",
+                                    "Type": "CASH"
+                                },
+                                {
+                                    "column1": "3",
+                                    "Benefit_per_order": "22.860000610351562",
+                                    "Order_City": "Townsville",
+                                    "Order_Country": "Australia",
+                                    "Order_Customer_Id": "19490",
+                                    "order_date_DateOrders": "2018-01-13 11:45:00.0000000",
+                                    "Order_Id": "75937",
+                                    "Order_Item_Cardprod_Id": "1360",
+                                    "Order_Item_Discount": "22.940000534057617",
+                                    "Order_Item_Discount_Rate": "0.07000000029802322",
+                                    "Order_Item_Id": "179252",
+                                    "Order_Item_Product_Price": "327.75",
+                                    "Order_Item_Profit_Ratio": "0.07999999821186066",
+                                    "Order_Item_Quantity": "1",
+                                    "Order_Item_Total": "304.8099976",
+                                    "Order_Profit_Per_Order": "22.86000061",
+                                    "Order_Region": "Oceania",
+                                    "Order_State": "Queensland",
+                                    "Order_Status": "COMPLETE",
+                                    "Order_Zipcode": "NULL",
+                                    "Sales": "327.75",
+                                    "Type": "DEBIT"
+                                },
+                                {
+                                    "column1": "4",
+                                    "Benefit_per_order": "134.2100067138672",
+                                    "Order_City": "Townsville",
+                                    "Order_Country": "Australia",
+                                    "Order_Customer_Id": "19489",
+                                    "order_date_DateOrders": "2018-01-13 11:24:00.0000000",
+                                    "Order_Id": "75936",
+                                    "Order_Item_Cardprod_Id": "1360",
+                                    "Order_Item_Discount": "29.5",
+                                    "Order_Item_Discount_Rate": "0.09000000357627869",
+                                    "Order_Item_Id": "179251",
+                                    "Order_Item_Product_Price": "327.75",
+                                    "Order_Item_Profit_Ratio": "0.44999998807907104",
+                                    "Order_Item_Quantity": "1",
+                                    "Order_Item_Total": "298.25",
+                                    "Order_Profit_Per_Order": "134.2100067",
+                                    "Order_Region": "Oceania",
+                                    "Order_State": "Queensland",
+                                    "Order_Status": "PENDING_PAYMENT",
+                                    "Order_Zipcode": "NULL",
+                                    "Sales": "327.75",
+                                    "Type": "PAYMENT"
+                                },
+                                {
+                                    "column1": "5",
+                                    "Benefit_per_order": "18.579999923706055",
+                                    "Order_City": "Toowoomba",
+                                    "Order_Country": "Australia",
+                                    "Order_Customer_Id": "19488",
+                                    "order_date_DateOrders": "2018-01-13 11:03:00.0000000",
+                                    "Order_Id": "75935",
+                                    "Order_Item_Cardprod_Id": "1360",
+                                    "Order_Item_Discount": "32.779998779296875",
+                                    "Order_Item_Discount_Rate": "0.10000000149011612",
+                                    "Order_Item_Id": "179250",
+                                    "Order_Item_Product_Price": "327.75",
+                                    "Order_Item_Profit_Ratio": "0.05999999865889549",
+                                    "Order_Item_Quantity": "1",
+                                    "Order_Item_Total": "294.980011",
+                                    "Order_Profit_Per_Order": "18.57999992",
+                                    "Order_Region": "Oceania",
+                                    "Order_State": "Queensland",
+                                    "Order_Status": "CANCELED",
+                                    "Order_Zipcode": "NULL",
+                                    "Sales": "327.75",
+                                    "Type": "TRANSFER"
+                                },
+                                {
+                                    "column1": "6",
+                                    "Benefit_per_order": "95.18000030517578",
+                                    "Order_City": "Guangzhou",
+                                    "Order_Country": "China",
+                                    "Order_Customer_Id": "19487",
+                                    "order_date_DateOrders": "2018-01-13 10:42:00.0000000",
+                                    "Order_Id": "75934",
+                                    "Order_Item_Cardprod_Id": "1360",
+                                    "Order_Item_Discount": "39.33000183105469",
+                                    "Order_Item_Discount_Rate": "0.11999999731779099",
+                                    "Order_Item_Id": "179249",
+                                    "Order_Item_Product_Price": "327.75",
+                                    "Order_Item_Profit_Ratio": "0.33000001311302185",
+                                    "Order_Item_Quantity": "1",
+                                    "Order_Item_Total": "288.4200134",
+                                    "Order_Profit_Per_Order": "95.18000031",
+                                    "Order_Region": "Eastern Asia",
+                                    "Order_State": "Guangdong",
+                                    "Order_Status": "COMPLETE",
+                                    "Order_Zipcode": "NULL",
+                                    "Sales": "327.75",
+                                    "Type": "DEBIT"
+                                },
+                                {
+                                    "column1": "7",
+                                    "Benefit_per_order": "68.43000030517578",
+                                    "Order_City": "Guangzhou",
+                                    "Order_Country": "China",
+                                    "Order_Customer_Id": "19486",
+                                    "order_date_DateOrders": "2018-01-13 10:21:00.0000000",
+                                    "Order_Id": "75933",
+                                    "Order_Item_Cardprod_Id": "1360",
+                                    "Order_Item_Discount": "42.61000061035156",
+                                    "Order_Item_Discount_Rate": "0.12999999523162842",
+                                    "Order_Item_Id": "179248",
+                                    "Order_Item_Product_Price": "327.75",
+                                    "Order_Item_Profit_Ratio": "0.23999999463558197",
+                                    "Order_Item_Quantity": "1",
+                                    "Order_Item_Total": "285.1400146",
+                                    "Order_Profit_Per_Order": "68.43000031",
+                                    "Order_Region": "Eastern Asia",
+                                    "Order_State": "Guangdong",
+                                    "Order_Status": "PROCESSING",
+                                    "Order_Zipcode": "NULL",
+                                    "Sales": "327.75",
+                                    "Type": "TRANSFER"
+                                },
+                                {
+                                    "column1": "8",
+                                    "Benefit_per_order": "133.72000122070312",
+                                    "Order_City": "Guangzhou",
+                                    "Order_Country": "China",
+                                    "Order_Customer_Id": "19485",
+                                    "order_date_DateOrders": "2018-01-13 10:00:00.0000000",
+                                    "Order_Id": "75932",
+                                    "Order_Item_Cardprod_Id": "1360",
+                                    "Order_Item_Discount": "49.15999984741211",
+                                    "Order_Item_Discount_Rate": "0.15000000596046448",
+                                    "Order_Item_Id": "179247",
+                                    "Order_Item_Product_Price": "327.75",
+                                    "Order_Item_Profit_Ratio": "0.47999998927116394",
+                                    "Order_Item_Quantity": "1",
+                                    "Order_Item_Total": "278.5899963",
+                                    "Order_Profit_Per_Order": "133.7200012",
+                                    "Order_Region": "Eastern Asia",
+                                    "Order_State": "Guangdong",
+                                    "Order_Status": "CLOSED",
+                                    "Order_Zipcode": "NULL",
+                                    "Sales": "327.75",
+                                    "Type": "CASH"
+                                },
+                                {
+                                    "column1": "9",
+                                    "Benefit_per_order": "132.14999389648438",
+                                    "Order_City": "Guangzhou",
+                                    "Order_Country": "China",
+                                    "Order_Customer_Id": "19484",
+                                    "order_date_DateOrders": "2018-01-13 09:39:00.0000000",
+                                    "Order_Id": "75931",
+                                    "Order_Item_Cardprod_Id": "1360",
+                                    "Order_Item_Discount": "52.439998626708984",
+                                    "Order_Item_Discount_Rate": "0.1599999964237213",
+                                    "Order_Item_Id": "179246",
+                                    "Order_Item_Product_Price": "327.75",
+                                    "Order_Item_Profit_Ratio": "0.47999998927116394",
+                                    "Order_Item_Quantity": "1",
+                                    "Order_Item_Total": "275.3099976",
+                                    "Order_Profit_Per_Order": "132.1499939",
+                                    "Order_Region": "Eastern Asia",
+                                    "Order_State": "Guangdong",
+                                    "Order_Status": "CLOSED",
+                                    "Order_Zipcode": "NULL",
+                                    "Sales": "327.75",
+                                    "Type": "CASH"
+                                }
+                            ]
+                        },
+                        "text/html": [
+                            "<table>",
+                            "<tr><th>column1</th><th>Benefit_per_order</th><th>Order_City</th><th>Order_Country</th><th>Order_Customer_Id</th><th>order_date_DateOrders</th><th>Order_Id</th><th>Order_Item_Cardprod_Id</th><th>Order_Item_Discount</th><th>Order_Item_Discount_Rate</th><th>Order_Item_Id</th><th>Order_Item_Product_Price</th><th>Order_Item_Profit_Ratio</th><th>Order_Item_Quantity</th><th>Order_Item_Total</th><th>Order_Profit_Per_Order</th><th>Order_Region</th><th>Order_State</th><th>Order_Status</th><th>Order_Zipcode</th><th>Sales</th><th>Type</th></tr>",
+                            "<tr><td>0</td><td>91.25</td><td>Bekasi</td><td>Indonesia</td><td>20755</td><td>2018-01-31 22:56:00.0000000</td><td>77202</td><td>1360</td><td>13.109999656677246</td><td>0.03999999910593033</td><td>180517</td><td>327.75</td><td>0.28999999165534973</td><td>1</td><td>314.6400146</td><td>91.25</td><td>Southeast Asia</td><td>Java Occidental</td><td>COMPLETE</td><td>NULL</td><td>327.75</td><td>DEBIT</td></tr>",
+                            "<tr><td>1</td><td>-249.08999633789062</td><td>Bikaner</td><td>India</td><td>19492</td><td>2018-01-13 12:27:00.0000000</td><td>75939</td><td>1360</td><td>16.389999389648438</td><td>0.05000000074505806</td><td>179254</td><td>327.75</td><td>-0.800000011920929</td><td>1</td><td>311.3599854</td><td>-249.0899963</td><td>South Asia</td><td>Rajastán</td><td>PENDING</td><td>NULL</td><td>327.75</td><td>TRANSFER</td></tr>",
+                            "<tr><td>2</td><td>-247.77999877929688</td><td>Bikaner</td><td>India</td><td>19491</td><td>2018-01-13 12:06:00.0000000</td><td>75938</td><td>1360</td><td>18.030000686645508</td><td>0.05999999865889549</td><td>179253</td><td>327.75</td><td>-0.800000011920929</td><td>1</td><td>309.7200012</td><td>-247.7799988</td><td>South Asia</td><td>Rajastán</td><td>CLOSED</td><td>NULL</td><td>327.75</td><td>CASH</td></tr>",
+                            "<tr><td>3</td><td>22.860000610351562</td><td>Townsville</td><td>Australia</td><td>19490</td><td>2018-01-13 11:45:00.0000000</td><td>75937</td><td>1360</td><td>22.940000534057617</td><td>0.07000000029802322</td><td>179252</td><td>327.75</td><td>0.07999999821186066</td><td>1</td><td>304.8099976</td><td>22.86000061</td><td>Oceania</td><td>Queensland</td><td>COMPLETE</td><td>NULL</td><td>327.75</td><td>DEBIT</td></tr>",
+                            "<tr><td>4</td><td>134.2100067138672</td><td>Townsville</td><td>Australia</td><td>19489</td><td>2018-01-13 11:24:00.0000000</td><td>75936</td><td>1360</td><td>29.5</td><td>0.09000000357627869</td><td>179251</td><td>327.75</td><td>0.44999998807907104</td><td>1</td><td>298.25</td><td>134.2100067</td><td>Oceania</td><td>Queensland</td><td>PENDING_PAYMENT</td><td>NULL</td><td>327.75</td><td>PAYMENT</td></tr>",
+                            "<tr><td>5</td><td>18.579999923706055</td><td>Toowoomba</td><td>Australia</td><td>19488</td><td>2018-01-13 11:03:00.0000000</td><td>75935</td><td>1360</td><td>32.779998779296875</td><td>0.10000000149011612</td><td>179250</td><td>327.75</td><td>0.05999999865889549</td><td>1</td><td>294.980011</td><td>18.57999992</td><td>Oceania</td><td>Queensland</td><td>CANCELED</td><td>NULL</td><td>327.75</td><td>TRANSFER</td></tr>",
+                            "<tr><td>6</td><td>95.18000030517578</td><td>Guangzhou</td><td>China</td><td>19487</td><td>2018-01-13 10:42:00.0000000</td><td>75934</td><td>1360</td><td>39.33000183105469</td><td>0.11999999731779099</td><td>179249</td><td>327.75</td><td>0.33000001311302185</td><td>1</td><td>288.4200134</td><td>95.18000031</td><td>Eastern Asia</td><td>Guangdong</td><td>COMPLETE</td><td>NULL</td><td>327.75</td><td>DEBIT</td></tr>",
+                            "<tr><td>7</td><td>68.43000030517578</td><td>Guangzhou</td><td>China</td><td>19486</td><td>2018-01-13 10:21:00.0000000</td><td>75933</td><td>1360</td><td>42.61000061035156</td><td>0.12999999523162842</td><td>179248</td><td>327.75</td><td>0.23999999463558197</td><td>1</td><td>285.1400146</td><td>68.43000031</td><td>Eastern Asia</td><td>Guangdong</td><td>PROCESSING</td><td>NULL</td><td>327.75</td><td>TRANSFER</td></tr>",
+                            "<tr><td>8</td><td>133.72000122070312</td><td>Guangzhou</td><td>China</td><td>19485</td><td>2018-01-13 10:00:00.0000000</td><td>75932</td><td>1360</td><td>49.15999984741211</td><td>0.15000000596046448</td><td>179247</td><td>327.75</td><td>0.47999998927116394</td><td>1</td><td>278.5899963</td><td>133.7200012</td><td>Eastern Asia</td><td>Guangdong</td><td>CLOSED</td><td>NULL</td><td>327.75</td><td>CASH</td></tr>",
+                            "<tr><td>9</td><td>132.14999389648438</td><td>Guangzhou</td><td>China</td><td>19484</td><td>2018-01-13 09:39:00.0000000</td><td>75931</td><td>1360</td><td>52.439998626708984</td><td>0.1599999964237213</td><td>179246</td><td>327.75</td><td>0.47999998927116394</td><td>1</td><td>275.3099976</td><td>132.1499939</td><td>Eastern Asia</td><td>Guangdong</td><td>CLOSED</td><td>NULL</td><td>327.75</td><td>CASH</td></tr>",
+                            "</table>"
+                        ]
+                    }
+                }
+            ],
+            "execution_count": 1
+        },
+        {
+            "cell_type": "markdown",
+            "source": [
+                "**Total unique customers per country**"
+            ],
+            "metadata": {
+                "azdata_cell_guid": "51c61121-4c1d-453b-978a-0fe14a07cc8b"
+            },
+            "attachments": {}
+        },
+        {
+            "cell_type": "code",
+            "source": [
+                "SELECT TOP 10 Order_Country, Order_City, COUNT(DISTINCT Order_Customer_Id) AS Unique_Customers\r\n",
+                "FROM OrderData\r\n",
+                "GROUP BY Order_Country, Order_City\r\n",
+                "ORDER BY COUNT(DISTINCT Order_Customer_Id) DESC;\r\n",
+                ""
+            ],
+            "metadata": {
+                "azdata_cell_guid": "2e1bf542-0b80-4320-b7ed-dcde2113e7e0",
+                "language": "sql"
+            },
+            "outputs": [
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "(10 rows affected)"
+                    },
+                    "metadata": {}
+                },
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "Total execution time: 00:00:02.241"
+                    },
+                    "metadata": {}
+                },
+                {
+                    "output_type": "execute_result",
+                    "metadata": {},
+                    "execution_count": 2,
+                    "data": {
+                        "application/vnd.dataresource+json": {
+                            "schema": {
+                                "fields": [
+                                    {
+                                        "name": "Order_Country"
+                                    },
+                                    {
+                                        "name": "Order_City"
+                                    },
+                                    {
+                                        "name": "Unique_Customers"
+                                    }
+                                ]
+                            },
+                            "data": [
+                                {
+                                    "Order_Country": "República Dominicana",
+                                    "Order_City": "Santo Domingo",
+                                    "Unique_Customers": "732"
+                                },
+                                {
+                                    "Order_Country": "Estados Unidos",
+                                    "Order_City": "New York City",
+                                    "Unique_Customers": "720"
+                                },
+                                {
+                                    "Order_Country": "Estados Unidos",
+                                    "Order_City": "Los Angeles",
+                                    "Unique_Customers": "615"
+                                },
+                                {
+                                    "Order_Country": "Filipinas",
+                                    "Order_City": "Manila",
+                                    "Unique_Customers": "606"
+                                },
+                                {
+                                    "Order_Country": "Honduras",
+                                    "Order_City": "Tegucigalpa",
+                                    "Unique_Customers": "565"
+                                },
+                                {
+                                    "Order_Country": "Nicaragua",
+                                    "Order_City": "Managua",
+                                    "Unique_Customers": "542"
+                                },
+                                {
+                                    "Order_Country": "México",
+                                    "Order_City": "Mexico City",
+                                    "Unique_Customers": "491"
+                                },
+                                {
+                                    "Order_Country": "Indonesia",
+                                    "Order_City": "Yakarta",
+                                    "Unique_Customers": "466"
+                                },
+                                {
+                                    "Order_Country": "Estados Unidos",
+                                    "Order_City": "Philadelphia",
+                                    "Unique_Customers": "431"
+                                },
+                                {
+                                    "Order_Country": "Reino Unido",
+                                    "Order_City": "London",
+                                    "Unique_Customers": "431"
+                                }
+                            ]
+                        },
+                        "text/html": [
+                            "<table>",
+                            "<tr><th>Order_Country</th><th>Order_City</th><th>Unique_Customers</th></tr>",
+                            "<tr><td>República Dominicana</td><td>Santo Domingo</td><td>732</td></tr>",
+                            "<tr><td>Estados Unidos</td><td>New York City</td><td>720</td></tr>",
+                            "<tr><td>Estados Unidos</td><td>Los Angeles</td><td>615</td></tr>",
+                            "<tr><td>Filipinas</td><td>Manila</td><td>606</td></tr>",
+                            "<tr><td>Honduras</td><td>Tegucigalpa</td><td>565</td></tr>",
+                            "<tr><td>Nicaragua</td><td>Managua</td><td>542</td></tr>",
+                            "<tr><td>México</td><td>Mexico City</td><td>491</td></tr>",
+                            "<tr><td>Indonesia</td><td>Yakarta</td><td>466</td></tr>",
+                            "<tr><td>Estados Unidos</td><td>Philadelphia</td><td>431</td></tr>",
+                            "<tr><td>Reino Unido</td><td>London</td><td>431</td></tr>",
+                            "</table>"
+                        ]
+                    }
+                }
+            ],
+            "execution_count": 2
+        },
+        {
+            "cell_type": "markdown",
+            "source": [
+                "<span style=\"color: rgb(0, 128, 0);\">Seasonal Trends</span>"
+            ],
+            "metadata": {
+                "azdata_cell_guid": "e8fa39ef-3e13-464d-a80c-389f926768d9"
+            },
+            "attachments": {}
+        },
+        {
+            "cell_type": "code",
+            "source": [
+                "SELECT TOP 10 MONTH(order_date_DateOrders) AS Order_Month, Order_Item_Cardprod_Id, COUNT(*) AS Total_Orders\r\n",
+                "\r\n",
+                "FROM OrderData\r\n",
+                "\r\n",
+                "GROUP BY order_date_DateOrders, Order_Item_Cardprod_Id\r\n",
+                "ORDER BY Order_Month, Total_Orders DESC;"
+            ],
+            "metadata": {
+                "azdata_cell_guid": "657b8f1d-fc58-4ba9-aa78-fa15c41e906f",
+                "language": "sql"
+            },
+            "outputs": [
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "(10 rows affected)"
+                    },
+                    "metadata": {}
+                },
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "Total execution time: 00:00:00.601"
+                    },
+                    "metadata": {}
+                },
+                {
+                    "output_type": "execute_result",
+                    "metadata": {},
+                    "execution_count": 3,
+                    "data": {
+                        "application/vnd.dataresource+json": {
+                            "schema": {
+                                "fields": [
+                                    {
+                                        "name": "Order_Month"
+                                    },
+                                    {
+                                        "name": "Order_Item_Cardprod_Id"
+                                    },
+                                    {
+                                        "name": "Total_Orders"
+                                    }
+                                ]
+                            },
+                            "data": [
+                                {
+                                    "Order_Month": "1",
+                                    "Order_Item_Cardprod_Id": "1073",
+                                    "Total_Orders": "4"
+                                },
+                                {
+                                    "Order_Month": "1",
+                                    "Order_Item_Cardprod_Id": "365",
+                                    "Total_Orders": "4"
+                                },
+                                {
+                                    "Order_Month": "1",
+                                    "Order_Item_Cardprod_Id": "403",
+                                    "Total_Orders": "4"
+                                },
+                                {
+                                    "Order_Month": "1",
+                                    "Order_Item_Cardprod_Id": "1073",
+                                    "Total_Orders": "4"
+                                },
+                                {
+                                    "Order_Month": "1",
+                                    "Order_Item_Cardprod_Id": "403",
+                                    "Total_Orders": "4"
+                                },
+                                {
+                                    "Order_Month": "1",
+                                    "Order_Item_Cardprod_Id": "1014",
+                                    "Total_Orders": "4"
+                                },
+                                {
+                                    "Order_Month": "1",
+                                    "Order_Item_Cardprod_Id": "1004",
+                                    "Total_Orders": "3"
+                                },
+                                {
+                                    "Order_Month": "1",
+                                    "Order_Item_Cardprod_Id": "365",
+                                    "Total_Orders": "3"
+                                },
+                                {
+                                    "Order_Month": "1",
+                                    "Order_Item_Cardprod_Id": "1004",
+                                    "Total_Orders": "3"
+                                },
+                                {
+                                    "Order_Month": "1",
+                                    "Order_Item_Cardprod_Id": "1014",
+                                    "Total_Orders": "3"
+                                }
+                            ]
+                        },
+                        "text/html": [
+                            "<table>",
+                            "<tr><th>Order_Month</th><th>Order_Item_Cardprod_Id</th><th>Total_Orders</th></tr>",
+                            "<tr><td>1</td><td>1073</td><td>4</td></tr>",
+                            "<tr><td>1</td><td>365</td><td>4</td></tr>",
+                            "<tr><td>1</td><td>403</td><td>4</td></tr>",
+                            "<tr><td>1</td><td>1073</td><td>4</td></tr>",
+                            "<tr><td>1</td><td>403</td><td>4</td></tr>",
+                            "<tr><td>1</td><td>1014</td><td>4</td></tr>",
+                            "<tr><td>1</td><td>1004</td><td>3</td></tr>",
+                            "<tr><td>1</td><td>365</td><td>3</td></tr>",
+                            "<tr><td>1</td><td>1004</td><td>3</td></tr>",
+                            "<tr><td>1</td><td>1014</td><td>3</td></tr>",
+                            "</table>"
+                        ]
+                    }
+                }
+            ],
+            "execution_count": 3
+        },
+        {
+            "cell_type": "markdown",
+            "source": [
+                "<span style=\"color: rgb(0, 128, 0);\">Top 10 countries that uses the most types (Debit, Credit, etc)</span>"
+            ],
+            "metadata": {
+                "azdata_cell_guid": "4043d614-5ca0-489e-bc8d-9423465ca788"
+            },
+            "attachments": {}
+        },
+        {
+            "cell_type": "code",
+            "source": [
+                "SELECT  TOP 10\r\n",
+                "\r\n",
+                "    Order_Country,\r\n",
+                "\r\n",
+                "    Type,\r\n",
+                "\r\n",
+                "    NumberOfOrders\r\n",
+                "\r\n",
+                "FROM (\r\n",
+                "\r\n",
+                "    SELECT\r\n",
+                "\r\n",
+                "        Order_Country,\r\n",
+                "\r\n",
+                "        Type,\r\n",
+                "\r\n",
+                "        COUNT(*) AS NumberOfOrders,\r\n",
+                "\r\n",
+                "        RANK() OVER (ORDER BY COUNT(*) DESC) as CountryRank\r\n",
+                "\r\n",
+                "    FROM \r\n",
+                "\r\n",
+                "        OrderData\r\n",
+                "\r\n",
+                "    GROUP BY \r\n",
+                "\r\n",
+                "        Order_Country, Type\r\n",
+                "\r\n",
+                ") as ranked_orders\r\n",
+                "\r\n",
+                "WHERE \r\n",
+                "\r\n",
+                "    CountryRank <= 10\r\n",
+                "\r\n",
+                "ORDER BY \r\n",
+                "\r\n",
+                "    Order_Country, NumberOfOrders DESC\r\n",
+                ""
+            ],
+            "metadata": {
+                "azdata_cell_guid": "042294ce-24f8-45e3-ba14-25309e60c6df",
+                "language": "sql"
+            },
+            "outputs": [
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "(10 rows affected)"
+                    },
+                    "metadata": {}
+                },
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "Total execution time: 00:00:00.123"
+                    },
+                    "metadata": {}
+                },
+                {
+                    "output_type": "execute_result",
+                    "metadata": {},
+                    "execution_count": 4,
+                    "data": {
+                        "application/vnd.dataresource+json": {
+                            "schema": {
+                                "fields": [
+                                    {
+                                        "name": "Order_Country"
+                                    },
+                                    {
+                                        "name": "Type"
+                                    },
+                                    {
+                                        "name": "NumberOfOrders"
+                                    }
+                                ]
+                            },
+                            "data": [
+                                {
+                                    "Order_Country": "Alemania",
+                                    "Type": "DEBIT",
+                                    "NumberOfOrders": "3670"
+                                },
+                                {
+                                    "Order_Country": "Australia",
+                                    "Type": "DEBIT",
+                                    "NumberOfOrders": "3324"
+                                },
+                                {
+                                    "Order_Country": "Estados Unidos",
+                                    "Type": "DEBIT",
+                                    "NumberOfOrders": "9805"
+                                },
+                                {
+                                    "Order_Country": "Estados Unidos",
+                                    "Type": "TRANSFER",
+                                    "NumberOfOrders": "6790"
+                                },
+                                {
+                                    "Order_Country": "Estados Unidos",
+                                    "Type": "PAYMENT",
+                                    "NumberOfOrders": "5517"
+                                },
+                                {
+                                    "Order_Country": "Francia",
+                                    "Type": "DEBIT",
+                                    "NumberOfOrders": "5039"
+                                },
+                                {
+                                    "Order_Country": "Francia",
+                                    "Type": "TRANSFER",
+                                    "NumberOfOrders": "3552"
+                                },
+                                {
+                                    "Order_Country": "Francia",
+                                    "Type": "PAYMENT",
+                                    "NumberOfOrders": "3227"
+                                },
+                                {
+                                    "Order_Country": "México",
+                                    "Type": "DEBIT",
+                                    "NumberOfOrders": "5043"
+                                },
+                                {
+                                    "Order_Country": "México",
+                                    "Type": "TRANSFER",
+                                    "NumberOfOrders": "3662"
+                                }
+                            ]
+                        },
+                        "text/html": [
+                            "<table>",
+                            "<tr><th>Order_Country</th><th>Type</th><th>NumberOfOrders</th></tr>",
+                            "<tr><td>Alemania</td><td>DEBIT</td><td>3670</td></tr>",
+                            "<tr><td>Australia</td><td>DEBIT</td><td>3324</td></tr>",
+                            "<tr><td>Estados Unidos</td><td>DEBIT</td><td>9805</td></tr>",
+                            "<tr><td>Estados Unidos</td><td>TRANSFER</td><td>6790</td></tr>",
+                            "<tr><td>Estados Unidos</td><td>PAYMENT</td><td>5517</td></tr>",
+                            "<tr><td>Francia</td><td>DEBIT</td><td>5039</td></tr>",
+                            "<tr><td>Francia</td><td>TRANSFER</td><td>3552</td></tr>",
+                            "<tr><td>Francia</td><td>PAYMENT</td><td>3227</td></tr>",
+                            "<tr><td>México</td><td>DEBIT</td><td>5043</td></tr>",
+                            "<tr><td>México</td><td>TRANSFER</td><td>3662</td></tr>",
+                            "</table>"
+                        ]
+                    }
+                }
+            ],
+            "execution_count": 4
+        },
+        {
+            "cell_type": "markdown",
+            "source": [
+                "<span style=\"color: rgb(0, 128, 0);\">New table of sales performance, customer segmentation, geographical distribution of orders, and profitability</span>"
+            ],
+            "metadata": {
+                "azdata_cell_guid": "0149b7ba-6a54-4879-a132-ab9133f7c6ff"
+            },
+            "attachments": {}
+        },
+        {
+            "cell_type": "code",
+            "source": [
+                "Select TOP 10  OrderData.Order_Item_Product_Price as Product_Price,Category_Name, Product_Card_Id as Order_Item_CardProd_Id, Product_Name, Customer_Segment, Order_City, Order_Country,CustomerData.Customer_Id as Order_Customer_Id, Customer_City, Customer_Country, Order_Profit_Per_Order\r\n",
+                "\r\n",
+                "from OrderData\r\n",
+                "\r\n",
+                "INNER JOIN ProductData\r\n",
+                "\r\n",
+                "        ON ProductData.Product_Card_Id= OrderData.Order_Item_CardProd_Id\r\n",
+                "\r\n",
+                "INNER JOIN CustomerData\r\n",
+                "\r\n",
+                "        ON CustomerData.Customer_Id= OrderData.Order_Customer_Id"
+            ],
+            "metadata": {
+                "azdata_cell_guid": "37dc60e0-61ba-472f-8ba7-387a7d0ee867",
+                "language": "sql"
+            },
+            "outputs": [
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "(10 rows affected)"
+                    },
+                    "metadata": {}
+                },
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "Total execution time: 00:00:00.049"
+                    },
+                    "metadata": {}
+                },
+                {
+                    "output_type": "execute_result",
+                    "metadata": {},
+                    "execution_count": 5,
+                    "data": {
+                        "application/vnd.dataresource+json": {
+                            "schema": {
+                                "fields": [
+                                    {
+                                        "name": "Product_Price"
+                                    },
+                                    {
+                                        "name": "Category_Name"
+                                    },
+                                    {
+                                        "name": "Order_Item_CardProd_Id"
+                                    },
+                                    {
+                                        "name": "Product_Name"
+                                    },
+                                    {
+                                        "name": "Customer_Segment"
+                                    },
+                                    {
+                                        "name": "Order_City"
+                                    },
+                                    {
+                                        "name": "Order_Country"
+                                    },
+                                    {
+                                        "name": "Order_Customer_Id"
+                                    },
+                                    {
+                                        "name": "Customer_City"
+                                    },
+                                    {
+                                        "name": "Customer_Country"
+                                    },
+                                    {
+                                        "name": "Order_Profit_Per_Order"
+                                    }
+                                ]
+                            },
+                            "data": [
+                                {
+                                    "Product_Price": "327.75",
+                                    "Category_Name": "Sporting Goods",
+                                    "Order_Item_CardProd_Id": "1360",
+                                    "Product_Name": "Smart watch ",
+                                    "Customer_Segment": "Consumer",
+                                    "Order_City": "Bekasi",
+                                    "Order_Country": "Indonesia",
+                                    "Order_Customer_Id": "20755",
+                                    "Customer_City": "Caguas",
+                                    "Customer_Country": "Puerto Rico",
+                                    "Order_Profit_Per_Order": "91.25"
+                                },
+                                {
+                                    "Product_Price": "327.75",
+                                    "Category_Name": "Sporting Goods",
+                                    "Order_Item_CardProd_Id": "1360",
+                                    "Product_Name": "Smart watch ",
+                                    "Customer_Segment": "Consumer",
+                                    "Order_City": "Bikaner",
+                                    "Order_Country": "India",
+                                    "Order_Customer_Id": "19492",
+                                    "Customer_City": "Caguas",
+                                    "Customer_Country": "Puerto Rico",
+                                    "Order_Profit_Per_Order": "-249.0899963"
+                                },
+                                {
+                                    "Product_Price": "327.75",
+                                    "Category_Name": "Sporting Goods",
+                                    "Order_Item_CardProd_Id": "1360",
+                                    "Product_Name": "Smart watch ",
+                                    "Customer_Segment": "Consumer",
+                                    "Order_City": "Bikaner",
+                                    "Order_Country": "India",
+                                    "Order_Customer_Id": "19491",
+                                    "Customer_City": "San Jose",
+                                    "Customer_Country": "EE. UU.",
+                                    "Order_Profit_Per_Order": "-247.7799988"
+                                },
+                                {
+                                    "Product_Price": "327.75",
+                                    "Category_Name": "Sporting Goods",
+                                    "Order_Item_CardProd_Id": "1360",
+                                    "Product_Name": "Smart watch ",
+                                    "Customer_Segment": "Home Office",
+                                    "Order_City": "Townsville",
+                                    "Order_Country": "Australia",
+                                    "Order_Customer_Id": "19490",
+                                    "Customer_City": "Los Angeles",
+                                    "Customer_Country": "EE. UU.",
+                                    "Order_Profit_Per_Order": "22.86000061"
+                                },
+                                {
+                                    "Product_Price": "327.75",
+                                    "Category_Name": "Sporting Goods",
+                                    "Order_Item_CardProd_Id": "1360",
+                                    "Product_Name": "Smart watch ",
+                                    "Customer_Segment": "Corporate",
+                                    "Order_City": "Townsville",
+                                    "Order_Country": "Australia",
+                                    "Order_Customer_Id": "19489",
+                                    "Customer_City": "Caguas",
+                                    "Customer_Country": "Puerto Rico",
+                                    "Order_Profit_Per_Order": "134.2100067"
+                                },
+                                {
+                                    "Product_Price": "327.75",
+                                    "Category_Name": "Sporting Goods",
+                                    "Order_Item_CardProd_Id": "1360",
+                                    "Product_Name": "Smart watch ",
+                                    "Customer_Segment": "Consumer",
+                                    "Order_City": "Toowoomba",
+                                    "Order_Country": "Australia",
+                                    "Order_Customer_Id": "19488",
+                                    "Customer_City": "Tonawanda",
+                                    "Customer_Country": "EE. UU.",
+                                    "Order_Profit_Per_Order": "18.57999992"
+                                },
+                                {
+                                    "Product_Price": "327.75",
+                                    "Category_Name": "Sporting Goods",
+                                    "Order_Item_CardProd_Id": "1360",
+                                    "Product_Name": "Smart watch ",
+                                    "Customer_Segment": "Home Office",
+                                    "Order_City": "Guangzhou",
+                                    "Order_Country": "China",
+                                    "Order_Customer_Id": "19487",
+                                    "Customer_City": "Caguas",
+                                    "Customer_Country": "Puerto Rico",
+                                    "Order_Profit_Per_Order": "95.18000031"
+                                },
+                                {
+                                    "Product_Price": "327.75",
+                                    "Category_Name": "Sporting Goods",
+                                    "Order_Item_CardProd_Id": "1360",
+                                    "Product_Name": "Smart watch ",
+                                    "Customer_Segment": "Corporate",
+                                    "Order_City": "Guangzhou",
+                                    "Order_Country": "China",
+                                    "Order_Customer_Id": "19486",
+                                    "Customer_City": "Miami",
+                                    "Customer_Country": "EE. UU.",
+                                    "Order_Profit_Per_Order": "68.43000031"
+                                },
+                                {
+                                    "Product_Price": "327.75",
+                                    "Category_Name": "Sporting Goods",
+                                    "Order_Item_CardProd_Id": "1360",
+                                    "Product_Name": "Smart watch ",
+                                    "Customer_Segment": "Corporate",
+                                    "Order_City": "Guangzhou",
+                                    "Order_Country": "China",
+                                    "Order_Customer_Id": "19485",
+                                    "Customer_City": "Caguas",
+                                    "Customer_Country": "Puerto Rico",
+                                    "Order_Profit_Per_Order": "133.7200012"
+                                },
+                                {
+                                    "Product_Price": "327.75",
+                                    "Category_Name": "Sporting Goods",
+                                    "Order_Item_CardProd_Id": "1360",
+                                    "Product_Name": "Smart watch ",
+                                    "Customer_Segment": "Corporate",
+                                    "Order_City": "Guangzhou",
+                                    "Order_Country": "China",
+                                    "Order_Customer_Id": "19484",
+                                    "Customer_City": "San Ramon",
+                                    "Customer_Country": "EE. UU.",
+                                    "Order_Profit_Per_Order": "132.1499939"
+                                }
+                            ]
+                        },
+                        "text/html": [
+                            "<table>",
+                            "<tr><th>Product_Price</th><th>Category_Name</th><th>Order_Item_CardProd_Id</th><th>Product_Name</th><th>Customer_Segment</th><th>Order_City</th><th>Order_Country</th><th>Order_Customer_Id</th><th>Customer_City</th><th>Customer_Country</th><th>Order_Profit_Per_Order</th></tr>",
+                            "<tr><td>327.75</td><td>Sporting Goods</td><td>1360</td><td>Smart watch </td><td>Consumer</td><td>Bekasi</td><td>Indonesia</td><td>20755</td><td>Caguas</td><td>Puerto Rico</td><td>91.25</td></tr>",
+                            "<tr><td>327.75</td><td>Sporting Goods</td><td>1360</td><td>Smart watch </td><td>Consumer</td><td>Bikaner</td><td>India</td><td>19492</td><td>Caguas</td><td>Puerto Rico</td><td>-249.0899963</td></tr>",
+                            "<tr><td>327.75</td><td>Sporting Goods</td><td>1360</td><td>Smart watch </td><td>Consumer</td><td>Bikaner</td><td>India</td><td>19491</td><td>San Jose</td><td>EE. UU.</td><td>-247.7799988</td></tr>",
+                            "<tr><td>327.75</td><td>Sporting Goods</td><td>1360</td><td>Smart watch </td><td>Home Office</td><td>Townsville</td><td>Australia</td><td>19490</td><td>Los Angeles</td><td>EE. UU.</td><td>22.86000061</td></tr>",
+                            "<tr><td>327.75</td><td>Sporting Goods</td><td>1360</td><td>Smart watch </td><td>Corporate</td><td>Townsville</td><td>Australia</td><td>19489</td><td>Caguas</td><td>Puerto Rico</td><td>134.2100067</td></tr>",
+                            "<tr><td>327.75</td><td>Sporting Goods</td><td>1360</td><td>Smart watch </td><td>Consumer</td><td>Toowoomba</td><td>Australia</td><td>19488</td><td>Tonawanda</td><td>EE. UU.</td><td>18.57999992</td></tr>",
+                            "<tr><td>327.75</td><td>Sporting Goods</td><td>1360</td><td>Smart watch </td><td>Home Office</td><td>Guangzhou</td><td>China</td><td>19487</td><td>Caguas</td><td>Puerto Rico</td><td>95.18000031</td></tr>",
+                            "<tr><td>327.75</td><td>Sporting Goods</td><td>1360</td><td>Smart watch </td><td>Corporate</td><td>Guangzhou</td><td>China</td><td>19486</td><td>Miami</td><td>EE. UU.</td><td>68.43000031</td></tr>",
+                            "<tr><td>327.75</td><td>Sporting Goods</td><td>1360</td><td>Smart watch </td><td>Corporate</td><td>Guangzhou</td><td>China</td><td>19485</td><td>Caguas</td><td>Puerto Rico</td><td>133.7200012</td></tr>",
+                            "<tr><td>327.75</td><td>Sporting Goods</td><td>1360</td><td>Smart watch </td><td>Corporate</td><td>Guangzhou</td><td>China</td><td>19484</td><td>San Ramon</td><td>EE. UU.</td><td>132.1499939</td></tr>",
+                            "</table>"
+                        ]
+                    }
+                }
+            ],
+            "execution_count": 5
+        },
+        {
+            "cell_type": "markdown",
+            "source": [
+                "<span style=\"color: rgb(0, 128, 0);\">Total number of orders per day.</span>"
+            ],
+            "metadata": {
+                "azdata_cell_guid": "2b5e164e-09d3-431d-8622-22d6fa5b009c"
+            }
+        },
+        {
+            "cell_type": "code",
+            "source": [
+                "SELECT TOP 10  Order_city,Order_Country,order_date_DateOrders, Count(*) as Order_per_Day\r\n",
+                "\r\n",
+                "FROM OrderData\r\n",
+                "\r\n",
+                "GROUP BY Order_city,Order_Country,order_date_DateOrders\r\n",
+                "\r\n",
+                "ORDER BY Order_city,Order_Country,order_date_DateOrders DESC;\r\n",
+                ""
+            ],
+            "metadata": {
+                "azdata_cell_guid": "b15ba161-9d76-4141-9d2a-cc544567c0bc",
+                "language": "sql"
+            },
+            "outputs": [
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "(10 rows affected)"
+                    },
+                    "metadata": {}
+                },
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "Total execution time: 00:00:00.167"
+                    },
+                    "metadata": {}
+                },
+                {
+                    "output_type": "execute_result",
+                    "metadata": {},
+                    "execution_count": 6,
+                    "data": {
+                        "application/vnd.dataresource+json": {
+                            "schema": {
+                                "fields": [
+                                    {
+                                        "name": "Order_city"
+                                    },
+                                    {
+                                        "name": "Order_Country"
+                                    },
+                                    {
+                                        "name": "order_date_DateOrders"
+                                    },
+                                    {
+                                        "name": "Order_per_Day"
+                                    }
+                                ]
+                            },
+                            "data": [
+                                {
+                                    "Order_city": "Aachen",
+                                    "Order_Country": "Alemania",
+                                    "order_date_DateOrders": "2017-10-23 07:19:00.0000000",
+                                    "Order_per_Day": "1"
+                                },
+                                {
+                                    "Order_city": "Aachen",
+                                    "Order_Country": "Alemania",
+                                    "order_date_DateOrders": "2017-10-21 04:10:00.0000000",
+                                    "Order_per_Day": "1"
+                                },
+                                {
+                                    "Order_city": "Aachen",
+                                    "Order_Country": "Alemania",
+                                    "order_date_DateOrders": "2017-10-21 03:49:00.0000000",
+                                    "Order_per_Day": "1"
+                                },
+                                {
+                                    "Order_city": "Aachen",
+                                    "Order_Country": "Alemania",
+                                    "order_date_DateOrders": "2017-10-21 03:28:00.0000000",
+                                    "Order_per_Day": "1"
+                                },
+                                {
+                                    "Order_city": "Aachen",
+                                    "Order_Country": "Alemania",
+                                    "order_date_DateOrders": "2017-10-21 03:07:00.0000000",
+                                    "Order_per_Day": "1"
+                                },
+                                {
+                                    "Order_city": "Aachen",
+                                    "Order_Country": "Alemania",
+                                    "order_date_DateOrders": "2017-10-21 02:46:00.0000000",
+                                    "Order_per_Day": "1"
+                                },
+                                {
+                                    "Order_city": "Aachen",
+                                    "Order_Country": "Alemania",
+                                    "order_date_DateOrders": "2017-10-21 02:25:00.0000000",
+                                    "Order_per_Day": "1"
+                                },
+                                {
+                                    "Order_city": "Aachen",
+                                    "Order_Country": "Alemania",
+                                    "order_date_DateOrders": "2017-10-02 08:55:00.0000000",
+                                    "Order_per_Day": "5"
+                                },
+                                {
+                                    "Order_city": "Aachen",
+                                    "Order_Country": "Alemania",
+                                    "order_date_DateOrders": "2017-10-01 18:54:00.0000000",
+                                    "Order_per_Day": "3"
+                                },
+                                {
+                                    "Order_city": "Aachen",
+                                    "Order_Country": "Alemania",
+                                    "order_date_DateOrders": "2017-08-23 16:41:00.0000000",
+                                    "Order_per_Day": "1"
+                                }
+                            ]
+                        },
+                        "text/html": [
+                            "<table>",
+                            "<tr><th>Order_city</th><th>Order_Country</th><th>order_date_DateOrders</th><th>Order_per_Day</th></tr>",
+                            "<tr><td>Aachen</td><td>Alemania</td><td>2017-10-23 07:19:00.0000000</td><td>1</td></tr>",
+                            "<tr><td>Aachen</td><td>Alemania</td><td>2017-10-21 04:10:00.0000000</td><td>1</td></tr>",
+                            "<tr><td>Aachen</td><td>Alemania</td><td>2017-10-21 03:49:00.0000000</td><td>1</td></tr>",
+                            "<tr><td>Aachen</td><td>Alemania</td><td>2017-10-21 03:28:00.0000000</td><td>1</td></tr>",
+                            "<tr><td>Aachen</td><td>Alemania</td><td>2017-10-21 03:07:00.0000000</td><td>1</td></tr>",
+                            "<tr><td>Aachen</td><td>Alemania</td><td>2017-10-21 02:46:00.0000000</td><td>1</td></tr>",
+                            "<tr><td>Aachen</td><td>Alemania</td><td>2017-10-21 02:25:00.0000000</td><td>1</td></tr>",
+                            "<tr><td>Aachen</td><td>Alemania</td><td>2017-10-02 08:55:00.0000000</td><td>5</td></tr>",
+                            "<tr><td>Aachen</td><td>Alemania</td><td>2017-10-01 18:54:00.0000000</td><td>3</td></tr>",
+                            "<tr><td>Aachen</td><td>Alemania</td><td>2017-08-23 16:41:00.0000000</td><td>1</td></tr>",
+                            "</table>"
+                        ]
+                    }
+                }
+            ],
+            "execution_count": 6
+        },
+        {
+            "cell_type": "markdown",
+            "source": [
+                "<span style=\"color: rgb(0, 128, 0);\">Total counts of consumer segments for countries.</span>"
+            ],
+            "metadata": {
+                "azdata_cell_guid": "35ae1d13-8491-4b63-858f-a625727c8343"
+            },
+            "attachments": {}
+        },
+        {
+            "cell_type": "code",
+            "source": [
+                "\r\n",
+                "SELECT TOP 10  Customer_Country,Customer_State,Customer_Segment, COUNT(*) as Customer_Total\r\n",
+                "\r\n",
+                "FROM CustomerData\r\n",
+                "\r\n",
+                "GROUP BY Customer_Country,Customer_State,Customer_Segment\r\n",
+                "\r\n",
+                "ORDER BY Customer_Country,Customer_State,Customer_Total DESC;"
+            ],
+            "metadata": {
+                "azdata_cell_guid": "3a478e21-ab86-4ce8-91c8-87476127760a",
+                "language": "sql"
+            },
+            "outputs": [
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "(10 rows affected)"
+                    },
+                    "metadata": {}
+                },
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "Total execution time: 00:00:00.061"
+                    },
+                    "metadata": {}
+                },
+                {
+                    "output_type": "execute_result",
+                    "metadata": {},
+                    "execution_count": 7,
+                    "data": {
+                        "application/vnd.dataresource+json": {
+                            "schema": {
+                                "fields": [
+                                    {
+                                        "name": "Customer_Country"
+                                    },
+                                    {
+                                        "name": "Customer_State"
+                                    },
+                                    {
+                                        "name": "Customer_Segment"
+                                    },
+                                    {
+                                        "name": "Customer_Total"
+                                    }
+                                ]
+                            },
+                            "data": [
+                                {
+                                    "Customer_Country": "EE. UU.",
+                                    "Customer_State": "91732",
+                                    "Customer_Segment": "Consumer",
+                                    "Customer_Total": "1"
+                                },
+                                {
+                                    "Customer_Country": "EE. UU.",
+                                    "Customer_State": "95758",
+                                    "Customer_Segment": "Consumer",
+                                    "Customer_Total": "1"
+                                },
+                                {
+                                    "Customer_Country": "EE. UU.",
+                                    "Customer_State": "95758",
+                                    "Customer_Segment": "Corporate",
+                                    "Customer_Total": "1"
+                                },
+                                {
+                                    "Customer_Country": "EE. UU.",
+                                    "Customer_State": "AL",
+                                    "Customer_Segment": "Consumer",
+                                    "Customer_Total": "4"
+                                },
+                                {
+                                    "Customer_Country": "EE. UU.",
+                                    "Customer_State": "AL",
+                                    "Customer_Segment": "Corporate",
+                                    "Customer_Total": "2"
+                                },
+                                {
+                                    "Customer_Country": "EE. UU.",
+                                    "Customer_State": "AR",
+                                    "Customer_Segment": "Consumer",
+                                    "Customer_Total": "16"
+                                },
+                                {
+                                    "Customer_Country": "EE. UU.",
+                                    "Customer_State": "AR",
+                                    "Customer_Segment": "Corporate",
+                                    "Customer_Total": "2"
+                                },
+                                {
+                                    "Customer_Country": "EE. UU.",
+                                    "Customer_State": "AR",
+                                    "Customer_Segment": "Home Office",
+                                    "Customer_Total": "2"
+                                },
+                                {
+                                    "Customer_Country": "EE. UU.",
+                                    "Customer_State": "AZ",
+                                    "Customer_Segment": "Consumer",
+                                    "Customer_Total": "208"
+                                },
+                                {
+                                    "Customer_Country": "EE. UU.",
+                                    "Customer_State": "AZ",
+                                    "Customer_Segment": "Corporate",
+                                    "Customer_Total": "93"
+                                }
+                            ]
+                        },
+                        "text/html": [
+                            "<table>",
+                            "<tr><th>Customer_Country</th><th>Customer_State</th><th>Customer_Segment</th><th>Customer_Total</th></tr>",
+                            "<tr><td>EE. UU.</td><td>91732</td><td>Consumer</td><td>1</td></tr>",
+                            "<tr><td>EE. UU.</td><td>95758</td><td>Consumer</td><td>1</td></tr>",
+                            "<tr><td>EE. UU.</td><td>95758</td><td>Corporate</td><td>1</td></tr>",
+                            "<tr><td>EE. UU.</td><td>AL</td><td>Consumer</td><td>4</td></tr>",
+                            "<tr><td>EE. UU.</td><td>AL</td><td>Corporate</td><td>2</td></tr>",
+                            "<tr><td>EE. UU.</td><td>AR</td><td>Consumer</td><td>16</td></tr>",
+                            "<tr><td>EE. UU.</td><td>AR</td><td>Corporate</td><td>2</td></tr>",
+                            "<tr><td>EE. UU.</td><td>AR</td><td>Home Office</td><td>2</td></tr>",
+                            "<tr><td>EE. UU.</td><td>AZ</td><td>Consumer</td><td>208</td></tr>",
+                            "<tr><td>EE. UU.</td><td>AZ</td><td>Corporate</td><td>93</td></tr>",
+                            "</table>"
+                        ]
+                    }
+                }
+            ],
+            "execution_count": 7
+        },
+        {
+            "cell_type": "markdown",
+            "source": [
+                " **Total counts customers  country**"
+            ],
+            "metadata": {
+                "azdata_cell_guid": "d5575d2c-2d48-42e8-bc70-99a0a9fe3fea"
+            },
+            "attachments": {}
+        },
+        {
+            "cell_type": "code",
+            "source": [
+                "\r\n",
+                "\r\n",
+                "SELECT Customer_Country, COUNT(*) AS Number_of_Customer\r\n",
+                "\r\n",
+                "FROM CustomerData\r\n",
+                "\r\n",
+                "GROUP BY Customer_Country\r\n",
+                "\r\n",
+                "ORDER BY Number_of_Customer DESC;"
+            ],
+            "metadata": {
+                "azdata_cell_guid": "b5b39186-0329-4e8a-9f8b-6ff49c2ca29d",
+                "language": "sql"
+            },
+            "outputs": [
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "(2 rows affected)"
+                    },
+                    "metadata": {}
+                },
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "Total execution time: 00:00:00.048"
+                    },
+                    "metadata": {}
+                },
+                {
+                    "output_type": "execute_result",
+                    "metadata": {},
+                    "execution_count": 8,
+                    "data": {
+                        "application/vnd.dataresource+json": {
+                            "schema": {
+                                "fields": [
+                                    {
+                                        "name": "Customer_Country"
+                                    },
+                                    {
+                                        "name": "Number_of_Customer"
+                                    }
+                                ]
+                            },
+                            "data": [
+                                {
+                                    "Customer_Country": "EE. UU.",
+                                    "Number_of_Customer": "12719"
+                                },
+                                {
+                                    "Customer_Country": "Puerto Rico",
+                                    "Number_of_Customer": "7933"
+                                }
+                            ]
+                        },
+                        "text/html": [
+                            "<table>",
+                            "<tr><th>Customer_Country</th><th>Number_of_Customer</th></tr>",
+                            "<tr><td>EE. UU.</td><td>12719</td></tr>",
+                            "<tr><td>Puerto Rico</td><td>7933</td></tr>",
+                            "</table>"
+                        ]
+                    }
+                }
+            ],
+            "execution_count": 8
+        }
+    ]
+}
